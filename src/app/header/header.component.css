@@ -1,0 +1,39 @@
+.row{
+    display: flex;
+    align-items: center;
+    border-color: rgb(112, 218, 230);
+    padding: 10px;
+    padding-right: 30px;
+    background-color: #333;
+}
+.container{
+    padding: 15px;
+}
+@media (max-width: 992px){
+    #logo{
+        text-align: center;
+    }
+    #AP{
+        width: 300px;
+    }
+    .centrar{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .centrar{
+        margin-top: 15px;
+    }
+}
+
+img{
+    width: 50px;
+}
+
+@media (min-width: 992px){
+    #AP{
+        width: 120px;
+    }
+}

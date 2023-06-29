@@ -1,0 +1,13 @@
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: rgb(112, 218, 230);
+    padding: 10px;
+    
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+}

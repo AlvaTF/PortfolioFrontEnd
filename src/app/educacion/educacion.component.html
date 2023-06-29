@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row alert alert-info">
+        <div>
+            <h1>Educación</h1>
+        </div>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevaedu">
+                Nueva Experiencia
+            </button>
+        </div>
+        <div>
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <td>
+                            <h2>{{Educacion.nombreE}}</h2>
+                        </td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td>
+                            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                             EDITAR</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                             BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
