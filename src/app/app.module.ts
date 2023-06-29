@@ -20,6 +20,10 @@ import { NeweducacionComponent } from './educacion/neweducacion.component';
 import { EditeducacionComponent } from './educacion/editeducacion.component';
 import { EdithardsoftComponent } from './hardsoft/edithardsoft.component';
 import { NewhardsoftComponent } from './hardsoft/newhardsoft.component';
+import { EditacercaComponent } from './acerca/editacerca.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -37,14 +41,17 @@ import { NewhardsoftComponent } from './hardsoft/newhardsoft.component';
     NeweducacionComponent,
     EditeducacionComponent,
     EdithardsoftComponent,
-    NewhardsoftComponent
+    NewhardsoftComponent,
+    EditacercaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]
