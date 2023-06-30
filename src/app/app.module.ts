@@ -24,6 +24,8 @@ import { EditacercaComponent } from './acerca/editacerca.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewproyectoComponent } from './proyectos/newproyecto.component';
+import { EditproyectoComponent } from './proyectos/editproyecto.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditeducacionComponent,
     EdithardsoftComponent,
     NewhardsoftComponent,
-    EditacercaComponent
+    EditacercaComponent,
+    NewproyectoComponent,
+    EditproyectoComponent
   ],
   imports: [
     BrowserModule,

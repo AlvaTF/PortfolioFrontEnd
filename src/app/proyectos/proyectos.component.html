@@ -1,19 +1,32 @@
 <div class="container">
     <div class="row alert alert-info">
-        <div class="col-lg-12">
-            <h1>Proyectos</h1>
+        <div>
+            <h1>Proyecto</h1>
         </div>
-        <div class="col-lg-12">
-            <h5>Proyecto I</h5>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevoproyecto">
+                Agregar Proyecto
+            </button>
         </div>
-        <div class="col-lg-9">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Pariatur voluptatem aliquam nulla fugiat minus. 
-                Esse accusantium earum ipsum officiis, aliquid 
-                nesciunt quisquam, assumenda rerum dolorum delectus id ducimus totam nulla.</p>
-        </div>
-        <div class="col-lg-3">
-            <img src="" alt="miniatura">
+        <div>
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let proyecto of proyecto">
+                        <td>
+                            <h2>{{proyecto.nombre}}</h2>
+                        </td>
+                        <td>{{proyecto.descripcion}}</td>
+                        <td>
+                            <button class="btn btn-light" routerLink="/editproyecto/{{proyecto.id}}">
+                             EDITAR</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="delete(proyecto.id)">
+                             BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

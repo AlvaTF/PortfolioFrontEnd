@@ -9,6 +9,8 @@ import { NeweducacionComponent } from './educacion/neweducacion.component';
 import { NewhardsoftComponent } from './hardsoft/newhardsoft.component';
 import { EdithardsoftComponent } from './hardsoft/edithardsoft.component';
 import { EditacercaComponent } from './acerca/editacerca.component';
+import { NewproyectoComponent } from './proyectos/newproyecto.component';
+import { EditproyectoComponent } from './proyectos/editproyecto.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path: 'newskill', component:NewhardsoftComponent},
   {path: 'editskill/:id', component:EdithardsoftComponent},
   {path: 'editacerca/:id', component:EditacercaComponent},
+  {path: 'nuevoproyecto', component:NewproyectoComponent},
+  {path: 'editproyecto/:id', component:EditproyectoComponent},
 ];
 
 @NgModule({
